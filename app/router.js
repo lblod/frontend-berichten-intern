@@ -7,6 +7,10 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
+  this.route('route-not-found', {
+    path: '/*wildcard'
+  });
+  this.route('conversatie', {path: '/conversatie/:id'});
 });
 
 export default Router;
