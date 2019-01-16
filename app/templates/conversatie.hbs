@@ -14,12 +14,12 @@
     <div class="form__row">
       <div class="grid u-spacer--tiny">
         <div class="col--6-12">
-          <div class="description-data__label">Verstuurd door</div>
-          <div class="description-data__value">{{model.lastModifier.fullName}}</div>
+          <div class="description-data__label">Verstuurd naar</div>
+          <div class="description-data__value">{{model.laatsteBericht.naar.classificatie.label}} {{model.laatsteBericht.naar.naam}}</div>
         </div>
         <div class="col--6-12">
           <div class="description-data__label">Verstuurd op</div>
-          <div class="description-data__value">{{moment-format model.sentDate 'DD-MM-YYYY'}}</div>
+          <div class="description-data__value">{{moment-format model.laatsteBericht.sentDate 'DD-MM-YYYY'}}</div>
         </div>
       </div>
     </div>
