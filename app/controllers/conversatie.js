@@ -11,5 +11,12 @@ export default Controller.extend({
       laatsteBericht.bijlagen.pushObject(file);
       await laatsteBericht.save();
     },
+    async deleteFile(file) {
+      const laatsteBericht = await this.model.laatsteBericht;
+      const bijlagen = laatsteBericht.bijlagen;
+      bijlagen.removeObject(file);
+      laatsteBericht.set('files', bijlagen);
+      await laatsteBericht.save();
+    }
   }
 });

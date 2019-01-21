@@ -27,7 +27,7 @@
       <div class="u-spacer"></div>
       <label class="form__label">Bijlagen beheren</label>
       {{#each model.laatsteBericht.bijlagen as |file|}}
-        {{vo-mu-file-card file=file onDelete=null active=false}}
+        {{vo-mu-file-card file=file onDelete=(action "deleteFile") active=true}}
       {{/each}}
       {{vo-mu-file-dropzone onFinishUpload=(action "addFile") accept=".pdf" maxFileSizeMB=400}}
     </div>
