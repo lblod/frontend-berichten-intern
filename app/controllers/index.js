@@ -9,7 +9,7 @@ export default Controller.extend({
   actions: {
     async addFile(file) {
       const conv = await this.store.findAll('conversatie');
-      this.model = conv;
+      this.set('model', conv);
     }
   }
 });
